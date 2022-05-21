@@ -1,0 +1,79 @@
+$main-color: rgba(132, 53, 229, 1);
+$secondary-color: #989898;
+$black-color: #303030;
+$input-color: #E6E6E6;
+$sec-2: #636363;
+$inBox: #F8F8F8;
+$input-color2: #D6D6D6;
+$hover-color: #582399;
+$main-color-2: #E6D2FF;
+
+.custom-container {
+  max-width: 1000px;
+
+  &.payment {
+    padding-top: 102px;
+    padding-bottom: 157px;
+    background-color: $inBox;
+    margin: 0 auto;
+  }
+
+  .input {
+    padding-right: 40px;
+  }
+
+  .container-fluid {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid $main-color;
+    padding-bottom: 20px;
+    margin-bottom: 16px;
+
+    .create-header {
+      align-items: center;
+      color: $black-color;
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+  }
+
+  .titles {
+    label {
+      font-size: 12px;
+      font-weight: 500;
+      color: $black-color;
+      margin: 10px 0 6px;
+    }
+
+    .icon {
+      top: 42px;
+      right: 12px;
+    }
+  }
+
+  .two {
+    justify-content: space-between;
+
+    .one {
+      width: 48%;
+    }
+  }
+
+  .customCheckbox2 {
+    margin: 20px 0;
+    font-weight: 500;
+    color: $black-color;
+    font-size: 12px;
+  }
+
+  .site-button {
+    margin-bottom: 20px;
+  }
+}

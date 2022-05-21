@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/payment.css">
+    <title>Credit Card Checkout</title>
+</head>
+<body>
+<div class="bg-white">
+    <div class="custom-container">
+        <header class="logged">
+            <!--<div class="phone">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.4166 12.3948V14.7698C16.4175 14.9902 16.3724 15.2085 16.284 15.4105C16.1957 15.6125 16.0662 15.7938 15.9037 15.9429C15.7412 16.0919 15.5494 16.2054 15.3406 16.2761C15.1317 16.3467 14.9104 16.3729 14.6908 16.3531C12.2547 16.0884 9.91467 15.2559 7.85872 13.9227C5.94591 12.7072 4.32419 11.0855 3.10872 9.17267C1.77078 7.10737 0.93816 4.75596 0.678301 2.30892C0.658517 2.09 0.684535 1.86935 0.754697 1.66104C0.824859 1.45272 0.937628 1.2613 1.08582 1.09895C1.23402 0.936606 1.4144 0.806896 1.61547 0.718081C1.81654 0.629266 2.0339 0.583292 2.25372 0.583085H4.62872C5.01292 0.579303 5.38539 0.715355 5.6767 0.965881C5.968 1.21641 6.15828 1.56431 6.21205 1.94475C6.31229 2.7048 6.4982 3.45108 6.76622 4.16933C6.87273 4.45269 6.89578 4.76064 6.83264 5.0567C6.7695 5.35275 6.62282 5.62451 6.40997 5.83975L5.40455 6.84517C6.53153 8.82714 8.17258 10.4682 10.1546 11.5952L11.16 10.5898C11.3752 10.3769 11.647 10.2302 11.943 10.1671C12.2391 10.1039 12.547 10.127 12.8304 10.2335C13.5486 10.5015 14.2949 10.6874 15.055 10.7877C15.4395 10.8419 15.7907 11.0356 16.0418 11.3319C16.2929 11.6282 16.4263 12.0065 16.4166 12.3948Z"
+                          stroke="#636363" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <a href="tel:0124444444" class="support">Dəstək: 012 444 44 44</a>
+            </div>-->
+            <div class="d-flex flex-row">
+                <div>
+                    <button class="favs">
+                        <svg class="star" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.173 8.01962L14.8689 12.2159L14.5866 12.4912L14.6533 12.8798L15.6702 18.8058L10.3485 16.0078L9.9995 15.8243L9.65047 16.0078L4.32876 18.8058L5.34572 12.8798L5.41241 12.4912L5.13009 12.2159L0.824621 8.01827L0.824573 8.01823L0.824353 8.01771L6.77455 7.15295L7.16484 7.09623L7.33931 6.74253L9.99766 1.35319L9.99777 1.353L9.99825 1.35213L9.99835 1.35195C9.99836 1.35195 9.99836 1.35194 9.99837 1.35193C9.99838 1.35193 9.99838 1.35193 9.99839 1.35192C9.99856 1.35179 9.99918 1.35135 10.0002 1.35097L12.6597 6.74253L12.8342 7.09623L13.2244 7.15295L19.1729 8.01745C19.173 8.01747 19.1731 8.01749 19.1732 8.01751C19.1734 8.01754 19.1736 8.01758 19.1738 8.01762L19.1736 8.019L19.173 8.01962ZM19.173 8.01962L19.1734 8.02031L19.1735 8.02011L19.173 8.01962ZM10.0009 1.35075C10.0011 1.35072 10.0012 1.35069 10.0013 1.35067C10.0016 1.3506 10.0018 1.35059 10.0018 1.35059C10.0018 1.35059 10.0017 1.35059 10.0016 1.35058C10.0015 1.35058 10.0014 1.35057 10.0013 1.35056C10.0009 1.35052 10.0006 1.35044 10.0003 1.35039C10.0002 1.35035 10.0001 1.35031 10.0001 1.35032C10.0001 1.35033 10.0001 1.35037 10.0003 1.35045L10.0009 1.35076M10.0009 1.35075L10.0009 1.35076M10.0009 1.35075C10.001 1.3508 10.0011 1.35084 10.0012 1.35088L10.0009 1.35076M10.0009 1.35075L10.0009 1.35076M0.821967 8.01806L0.822165 8.01803L0.822654 8.01851L0.821967 8.01806ZM9.99922 1.34893C9.99921 1.34892 9.99921 1.34892 9.99921 1.34891L9.99922 1.34893Z"
+                                  stroke="#8435E5" stroke-width="1.5"/>
+                        </svg>
+                        <span>Seçilmişlər</span>
+                    </button>
+
+                </div>
+                <button class="notification-btn position-relative">
+                    <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.3333 8.01449C20.3333 6.15413 19.5607 4.36997 18.1855 3.0545C16.8102 1.73902 14.9449 1 13 1C11.0551 1 9.18982 1.73902 7.81455 3.0545C6.43928 4.36997 5.66667 6.15413 5.66667 8.01449C5.66667 13.9484 3.21304 16.809 1.86406 17.9333C1.6615 18.1021 1.79337 18.5362 2.05706 18.5362H8.52214C8.6391 18.5362 8.74073 18.6154 8.77521 18.7271C8.99911 19.4529 9.99866 22 13 22C16.0013 22 17.0009 19.4529 17.2248 18.7271C17.2593 18.6154 17.3609 18.5362 17.4779 18.5362H23.9429C24.2066 18.5362 24.3385 18.1021 24.1359 17.9333C22.787 16.809 20.3333 13.9484 20.3333 8.01449Z"
+                              stroke="#5F2EEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="has-notification"></span>
+                </button>
+                <div class="photo">
+                    <a href="">
+                        <img class="profile-photo" src="/assets/img/images.jfif"/>
+                    </a>
+                </div>
+                <div class="social-icons-header d-none">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M0.666016 3.99984C0.666016 3.11578 1.01721 2.26794 1.64233 1.64281C2.26745 1.01769 3.11529 0.666504 3.99935 0.666504H13.9993C14.8834 0.666504 15.7313 1.01769 16.3564 1.64281C16.9815 2.26794 17.3327 3.11578 17.3327 3.99984V13.9998C17.3327 14.8839 16.9815 15.7317 16.3564 16.3569C15.7313 16.982 14.8834 17.3332 13.9993 17.3332H3.99935C3.11529 17.3332 2.26745 16.982 1.64233 16.3569C1.01721 15.7317 0.666016 14.8839 0.666016 13.9998V3.99984ZM3.99935 2.33317C3.55732 2.33317 3.1334 2.50877 2.82084 2.82133C2.50828 3.13389 2.33268 3.55781 2.33268 3.99984V13.9998C2.33268 14.4419 2.50828 14.8658 2.82084 15.1783C3.1334 15.4909 3.55732 15.6665 3.99935 15.6665H8.99935V9.83317H8.16602C7.945 9.83317 7.73304 9.74537 7.57676 9.58909C7.42048 9.43281 7.33268 9.22085 7.33268 8.99984C7.33268 8.77882 7.42048 8.56686 7.57676 8.41058C7.73304 8.2543 7.945 8.1665 8.16602 8.1665H8.99935V6.9165C8.99935 6.14296 9.30664 5.40109 9.85362 4.85411C10.4006 4.30713 11.1425 3.99984 11.916 3.99984H12.416C12.637 3.99984 12.849 4.08764 13.0053 4.24392C13.1616 4.4002 13.2493 4.61216 13.2493 4.83317C13.2493 5.05418 13.1616 5.26615 13.0053 5.42243C12.849 5.57871 12.637 5.6665 12.416 5.6665H11.916C11.7519 5.6665 11.5893 5.69884 11.4377 5.76165C11.286 5.82447 11.1482 5.91655 11.0321 6.03262C10.9161 6.14869 10.824 6.28649 10.7612 6.43815C10.6983 6.58981 10.666 6.75235 10.666 6.9165V8.1665H12.416C12.637 8.1665 12.849 8.2543 13.0053 8.41058C13.1616 8.56686 13.2493 8.77882 13.2493 8.99984C13.2493 9.22085 13.1616 9.43281 13.0053 9.58909C12.849 9.74537 12.637 9.83317 12.416 9.83317H10.666V15.6665H13.9993C14.4414 15.6665 14.8653 15.4909 15.1779 15.1783C15.4904 14.8658 15.666 14.4419 15.666 13.9998V3.99984C15.666 3.55781 15.4904 3.13389 15.1779 2.82133C14.8653 2.50877 14.4414 2.33317 13.9993 2.33317H3.99935Z"
+                              fill="#5F2EEA"/>
+                    </svg>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M3.99935 0.666504C3.11529 0.666504 2.26745 1.01769 1.64233 1.64281C1.01721 2.26794 0.666016 3.11578 0.666016 3.99984V13.9998C0.666016 14.8839 1.01721 15.7317 1.64233 16.3569C2.26745 16.982 3.11529 17.3332 3.99935 17.3332H13.9993C14.8834 17.3332 15.7313 16.982 16.3564 16.3569C16.9815 15.7317 17.3327 14.8839 17.3327 13.9998V3.99984C17.3327 3.11578 16.9815 2.26794 16.3564 1.64281C15.7313 1.01769 14.8834 0.666504 13.9993 0.666504H3.99935ZM2.33268 3.99984C2.33268 3.55781 2.50828 3.13389 2.82084 2.82133C3.1334 2.50877 3.55732 2.33317 3.99935 2.33317H13.9993C14.4414 2.33317 14.8653 2.50877 15.1779 2.82133C15.4904 3.13389 15.666 3.55781 15.666 3.99984V13.9998C15.666 14.4419 15.4904 14.8658 15.1779 15.1783C14.8653 15.4909 14.4414 15.6665 13.9993 15.6665H3.99935C3.55732 15.6665 3.1334 15.4909 2.82084 15.1783C2.50828 14.8658 2.33268 14.4419 2.33268 13.9998V3.99984ZM6.49935 8.1665C6.49935 7.94549 6.41155 7.73353 6.25527 7.57725C6.09899 7.42097 5.88703 7.33317 5.66602 7.33317C5.445 7.33317 5.23304 7.42097 5.07676 7.57725C4.92048 7.73353 4.83268 7.94549 4.83268 8.1665V13.1665C4.83268 13.3875 4.92048 13.5995 5.07676 13.7558C5.23304 13.912 5.445 13.9998 5.66602 13.9998C5.88703 13.9998 6.09899 13.912 6.25527 13.7558C6.41155 13.5995 6.49935 13.3875 6.49935 13.1665V8.1665ZM6.91602 5.24984C6.91602 5.58136 6.78432 5.8993 6.5499 6.13372C6.31548 6.36814 5.99754 6.49984 5.66602 6.49984C5.3345 6.49984 5.01655 6.36814 4.78213 6.13372C4.54771 5.8993 4.41602 5.58136 4.41602 5.24984C4.41602 4.91832 4.54771 4.60037 4.78213 4.36595C5.01655 4.13153 5.3345 3.99984 5.66602 3.99984C5.99754 3.99984 6.31548 4.13153 6.5499 4.36595C6.78432 4.60037 6.91602 4.91832 6.91602 5.24984ZM8.99935 7.33317C9.28268 7.33317 9.53268 7.47484 9.68268 7.68984C10.1122 7.45576 10.5935 7.33313 11.0827 7.33317C12.8827 7.33317 13.9993 8.93817 13.9993 10.309V13.1665C13.9993 13.3875 13.9116 13.5995 13.7553 13.7558C13.599 13.912 13.387 13.9998 13.166 13.9998C12.945 13.9998 12.733 13.912 12.5768 13.7558C12.4205 13.5995 12.3327 13.3875 12.3327 13.1665V10.3082C12.3327 9.66817 11.7827 8.999 11.0827 8.999C10.646 8.999 10.1635 9.2365 9.83268 9.8015V13.1665C9.83268 13.3875 9.74489 13.5995 9.5886 13.7558C9.43232 13.912 9.22036 13.9998 8.99935 13.9998C8.77834 13.9998 8.56637 13.912 8.41009 13.7558C8.25381 13.5995 8.16602 13.3875 8.16602 13.1665V8.1665C8.16602 7.94549 8.25381 7.73353 8.41009 7.57725C8.56637 7.42097 8.77834 7.33317 8.99935 7.33317Z"
+                              fill="#5F2EEA"/>
+                    </svg>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M0.666016 3.99984C0.666016 3.11578 1.01721 2.26794 1.64233 1.64281C2.26745 1.01769 3.11529 0.666504 3.99935 0.666504H13.9993C14.8834 0.666504 15.7313 1.01769 16.3564 1.64281C16.9815 2.26794 17.3327 3.11578 17.3327 3.99984V13.9998C17.3327 14.8839 16.9815 15.7317 16.3564 16.3569C15.7313 16.982 14.8834 17.3332 13.9993 17.3332H3.99935C3.11529 17.3332 2.26745 16.982 1.64233 16.3569C1.01721 15.7317 0.666016 14.8839 0.666016 13.9998V3.99984ZM3.99935 2.33317C3.55732 2.33317 3.1334 2.50877 2.82084 2.82133C2.50828 3.13389 2.33268 3.55781 2.33268 3.99984V13.9998C2.33268 14.4419 2.50828 14.8658 2.82084 15.1783C3.1334 15.4909 3.55732 15.6665 3.99935 15.6665H13.9993C14.4414 15.6665 14.8653 15.4909 15.1779 15.1783C15.4904 14.8658 15.666 14.4419 15.666 13.9998V3.99984C15.666 3.55781 15.4904 3.13389 15.1779 2.82133C14.8653 2.50877 14.4414 2.33317 13.9993 2.33317H3.99935ZM8.99935 6.49984C8.33631 6.49984 7.70042 6.76323 7.23158 7.23207C6.76274 7.70091 6.49935 8.3368 6.49935 8.99984C6.49935 9.66288 6.76274 10.2988 7.23158 10.7676C7.70042 11.2364 8.33631 11.4998 8.99935 11.4998C9.66239 11.4998 10.2983 11.2364 10.7671 10.7676C11.236 10.2988 11.4993 9.66288 11.4993 8.99984C11.4993 8.3368 11.236 7.70091 10.7671 7.23207C10.2983 6.76323 9.66239 6.49984 8.99935 6.49984ZM4.83268 8.99984C4.83268 7.89477 5.27167 6.83496 6.05307 6.05356C6.83447 5.27216 7.89428 4.83317 8.99935 4.83317C10.1044 4.83317 11.1642 5.27216 11.9456 6.05356C12.727 6.83496 13.166 7.89477 13.166 8.99984C13.166 10.1049 12.727 11.1647 11.9456 11.9461C11.1642 12.7275 10.1044 13.1665 8.99935 13.1665C7.89428 13.1665 6.83447 12.7275 6.05307 11.9461C5.27167 11.1647 4.83268 10.1049 4.83268 8.99984ZM13.5827 5.6665C13.9142 5.6665 14.2321 5.53481 14.4666 5.30039C14.701 5.06597 14.8327 4.74802 14.8327 4.4165C14.8327 4.08498 14.701 3.76704 14.4666 3.53262C14.2321 3.2982 13.9142 3.1665 13.5827 3.1665C13.2512 3.1665 12.9332 3.2982 12.6988 3.53262C12.4644 3.76704 12.3327 4.08498 12.3327 4.4165C12.3327 4.74802 12.4644 5.06597 12.6988 5.30039C12.9332 5.53481 13.2512 5.6665 13.5827 5.6665Z"
+                              fill="#5F2EEA"/>
+                    </svg>
+                    <button class="site-button">Giriş</button>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+
+<div class="nav-container">
+    <div class="custom-container">
+        <nav class="nav">
+            <div class="d-flex d-block align-items-center justify-content-between hamburger-container">
+                <div class="d-none hamburger">
+                    <button>
+                        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 6.66667H16V9.33333H0V6.66667ZM0 0H21.3333V2.66667H0V0ZM0 16H9.64666V13.3333H0V16Z"
+                                  fill="#ffffff"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="logo">
+                    <img src="../assets/icons/Favicon@1x.png" height="50" width="50"/>
+                </div>
+                <div class="center"></div>
+            </div>
+            <div class="search-container position-relative">
+                <input class="input nav-search" placeholder="Axtar...">
+                <svg class="position-absolute search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 20C15.9706 20 20 15.9706 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20Z"
+                          stroke="#A8A8A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 22L18 18" stroke="#A8A8A8" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <ul class="list">
+                <li class="active">
+                    <a href="">Əsas</a>
+                </li>
+                <li>
+                    <a href="">Kataloq</a>
+                </li>
+                <li>
+                    <a href="">Əlaqə</a>
+                </li>
+
+            </ul>
+            <button class="button">
+                <svg class="plus" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <rect width="2" height="14" transform="translate(6)" fill="white"/>
+                    <rect width="2" height="14" transform="translate(14 6) rotate(90)" fill="white"/>
+                </svg>
+                <span>Yeni elan</span>
+            </button>
+        </nav>
+    </div>
+</div>
+
+<div class="custom-container payment">
+    <form action="">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col col-sm-12">
+                    <div class="d-flex head">
+                        <h1 class="create-header">Kart əlavə et!</h1>
+                        <div>
+
+                            <svg width="51" height="35" viewBox="0 0 34 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="33" height="23" rx="3.5" fill="white" stroke="#D9D9D9"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M10.7503 15.8583H8.69051L7.14596 9.79238C7.07265 9.51335 6.91699 9.26667 6.68802 9.15041C6.11659 8.85824 5.48692 8.62571 4.8 8.50844V8.2749H8.11808C8.57603 8.2749 8.91948 8.62571 8.97673 9.03314L9.77813 13.4087L11.8369 8.2749H13.8394L10.7503 15.8583ZM14.9842 15.8583H13.039L14.6408 8.2749H16.586L14.9842 15.8583ZM19.1027 10.3757C19.1599 9.96728 19.5034 9.73375 19.9041 9.73375C20.5338 9.67511 21.2197 9.79238 21.7921 10.0835L22.1356 8.45082C21.5631 8.21728 20.9335 8.10001 20.362 8.10001C18.474 8.10001 17.1002 9.15041 17.1002 10.6082C17.1002 11.7173 18.0733 12.2996 18.7603 12.6504C19.5034 13.0002 19.7896 13.2338 19.7324 13.5836C19.7324 14.1083 19.1599 14.3418 18.5885 14.3418C17.9016 14.3418 17.2147 14.1669 16.586 13.8747L16.2426 15.5085C16.9295 15.7996 17.6726 15.9169 18.3596 15.9169C20.4765 15.9745 21.7921 14.9251 21.7921 13.35C21.7921 11.3665 19.1027 11.2502 19.1027 10.3757ZM28.6 15.8583L27.0554 8.2749H25.3964C25.0529 8.2749 24.7095 8.50844 24.595 8.85824L21.7349 15.8583H23.7374L24.1371 14.7502H26.5975L26.8265 15.8583H28.6ZM25.6826 10.3171L26.254 13.1751H24.6523L25.6826 10.3171Z"
+                                      fill="#172B85"/>
+                            </svg>
+
+                            <svg width="51" height="35" viewBox="0 0 34 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="33" height="23" rx="3.5" fill="white" stroke="#D9D9D9"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M17.179 16.8294C15.9949 17.8275 14.459 18.43 12.7807 18.43C9.03582 18.43 6 15.4303 6 11.73C6 8.02966 9.03582 5.02997 12.7807 5.02997C14.459 5.02997 15.9949 5.63247 17.179 6.63051C18.363 5.63247 19.8989 5.02997 21.5773 5.02997C25.3221 5.02997 28.358 8.02966 28.358 11.73C28.358 15.4303 25.3221 18.43 21.5773 18.43C19.8989 18.43 18.363 17.8275 17.179 16.8294Z"
+                                      fill="#ED0006"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M17.179 16.8294C18.6369 15.6005 19.5614 13.7719 19.5614 11.73C19.5614 9.68801 18.6369 7.85941 17.179 6.63051C18.363 5.63247 19.8989 5.02997 21.5773 5.02997C25.3221 5.02997 28.3579 8.02966 28.3579 11.73C28.3579 15.4303 25.3221 18.43 21.5773 18.43C19.8989 18.43 18.363 17.8275 17.179 16.8294Z"
+                                      fill="#F9A000"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M17.179 16.8294C18.6369 15.6005 19.5614 13.7719 19.5614 11.73C19.5614 9.68805 18.6369 7.85946 17.179 6.63055C15.7211 7.85946 14.7966 9.68805 14.7966 11.73C14.7966 13.7719 15.7211 15.6005 17.179 16.8294Z"
+                                      fill="#FF5E00"/>
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="position-relative titles">
+                        <label for="name" class="top">Ad/Soyad</label>
+                        <input id="name" type="text" class="input">
+                        <div class="position-absolute icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+                                      stroke="#C8C8C8" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+                                      stroke="#C8C8C8" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="position-relative titles">
+                        <label for="card-number">16 rəqəmli kod</label>
+                        <input id="card-number" type="number" class="input">
+                        <div class="position-absolute icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 4H3C1.89543 4 1 4.89543 1 6V18C1 19.1046 1.89543 20 3 20H21C22.1046 20 23 19.1046 23 18V6C23 4.89543 22.1046 4 21 4Z"
+                                      stroke="#C8C8C8" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M1 10H23" stroke="#C8C8C8" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex two">
+                    <div class="col-sm-6 one">
+                        <div class="position-relative titles">
+                            <label for="last-date">Son istifadə tarixi</label>
+                            <input id="last-date" type="text" class="input">
+                            <div class="position-absolute icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z"
+                                          stroke="#C8C8C8" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M16 2V6" stroke="#C8C8C8" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M8 2V6" stroke="#C8C8C8" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M3 10H21" stroke="#C8C8C8" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 one">
+                        <div class="position-relative titles">
+                            <label for="cvc">CVC/CVV</label>
+                            <input id="cvc" type="number" class="input">
+                            <div class="position-absolute icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                          stroke="#C8C8C8" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M12 8V12" stroke="#C8C8C8" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M12 16H12.01" stroke="#C8C8C8" stroke-width="2"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <label class="customCheckbox2">
+                        <input type="checkbox">
+                        <span class="checkmark-2"></span>
+                        <span class="title">Yadda saxla</span>
+                    </label>
+                </div>
+                <div class="col-sm-12">
+                    <button class="site-button">Təsdiq et</button>
+                </div>
+                <div class="col-sm-12">
+                    <div class="error">
+                        <div>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                      stroke="#EB5757" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M12 8V12" stroke="#EB5757" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M12 16H12.01" stroke="#EB5757" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="error-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, culpa
+                            distinctio
+                            exercitationem facere, illo itaque iure labore molestiae molestias nemo nesciunt officia
+                            optio perspiciatis provident quasi sunt totam vel veritatis.
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<section class="footer">
+    <div class="custom-container">
+        <div class="mobile-widgets d-flex justify-content-center flex-md-row flex-column" style="gap: 100px">
+            <div class="mobile-widget d-flex justify-content-between" style="gap: 100px" >
+                <div class="widget">
+                    <div class="d-flex flex-column">
+                        <span class="head-span">Partnyorlar</span>
+                        <span>Kapital Bank</span>
+                        <span>Baku Design Academy</span>
+                        <span>Irsad Telekom</span>
+                        <span>Tap.az</span>
+                    </div>
+                </div>
+                <div class="widget">
+                    <div class="d-flex flex-column">
+                        <span class="head-span">Haqqımızda</span>
+                        <span>10.15.2021</span>
+                        <span>10.15.2021</span>
+                        <span>10.15.2021</span>
+                        <span>10.15.2021</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-widget2 d-flex justify-content-between flex-column flex-sm-row" style="gap: 100px">
+                <div class="widget">
+                    <div class="d-flex flex-column">
+                        <span class="head-span">Əlaqə</span>
+                        <span>info@baxqazan.az</span>
+                        <span>+994 55 444 44 44</span>
+                        <span>+994 55 444 44 55</span>
+                        <span>+994 12 333 33 66</span>
+                    </div>
+                </div>
+                <div class="widget">
+                    <div class="d-flex flex-row flex-sm-column justify-content-between justify-content-lg-start">
+                        <div class="logo">
+                            <img src="/assets/img/footerLogo.png" alt="">
+                        </div>
+                        <div class="desktop-social">
+                            <ul class="social-icons d-flex">
+                                <li>
+                                    <a href="#"><img src="/assets/icons/fb-icon.svg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/assets/icons/li-icon.svg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/assets/icons/insta-icon.svg" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <a href="#" class="app-store">
+                                <img src="/assets/img/appStoreLogo.png" alt="">
+                            </a>
+                            <a href="#" class="google-play">
+                                <img src="/assets/img/googlePlayLogo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="mobile-social-icons">
+            <ul class=" justify-content-center social-icons d-flex">
+                <li>
+                    <a href="#"><img src="/assets/icons/fb-icon.svg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/assets/icons/li-icon.svg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/assets/icons/insta-icon.svg" alt=""></a>
+                </li>
+            </ul>
+        </div>
+        <div class="copyWrite">
+            <span>©️  2021 Baxqazan. Bütün hüquqlar qorunur</span>
+        </div>
+    </div>
+</section>
+</body>
+</html>

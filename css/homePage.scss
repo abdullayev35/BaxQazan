@@ -1,0 +1,145 @@
+$main-color: rgba(132, 53, 229, 1);
+$secondary-color: #989898;
+$black-color: #303030;
+$input-color: #E6E6E6;
+$sec-2: #636363;
+$inBox: #F8F8F8;
+$input-color2: #D6D6D6;
+$hover-color: rgba(88, 35, 153, 1);
+$error: rgba(235, 87, 87, 1);
+
+body{
+  background-color: #D8D8D8;
+}
+section.slider{
+  margin: 36px 0 22px 0;
+  .custom-container{
+    overflow:auto;
+    .headerCarousel{
+      margin-bottom: 22px;
+    }
+    .miniCarousel{
+      .item{
+        margin-right: 16px;
+        border-radius: 6px;
+
+        border: 1px solid rgba(214, 214, 214, 1);
+        background-color: white;
+        width: 102px;
+        height: 57px;
+        .icon{
+          text-align: center;
+        }
+        .title{
+          color: $secondary-color;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16.94px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+section.filter{
+  margin-bottom: 26px;
+  .custom-container{
+    background: rgba(248, 248, 248, 1);
+    border-radius: 8px;
+    padding: 16px;
+
+    .price{
+      span{
+        color: $sec-2;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19.36px;
+      }
+      .min-max{
+        margin-top: 10px;
+        .min{
+          margin-right: 18px;
+        }
+        .max{
+
+        }
+      }
+    }
+
+    .city{
+      span{
+        color: $sec-2;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19.36px;
+      }
+      select{
+        margin-top: 10px;
+      }
+    }
+    label{
+      margin-right: 30px;
+    }
+  }
+}
+
+section.products{
+  .custom-container{
+    .row{
+      .product{
+        margin-bottom: 44px;
+      }
+    }
+  }
+}
+
+section.Pagination {
+  margin-bottom: 68px;
+  .container {
+    .before, .after {
+      &:first-child{
+        svg{
+          margin-right: 16px;
+        }
+      }
+      &:last-child{
+        svg{
+          margin-left: 10px;
+        }
+      }
+      margin-right: 16px;
+      span {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $black-color;
+      }
+
+    }
+
+    .page-num {
+      margin-right: 20px;
+      a{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+      }
+    }
+    .active{
+      background-color: $main-color;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 40px;
+      a{
+        color: white;
+      }
+    }
+
+  }
+}

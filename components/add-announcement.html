@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/add-announcement.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="custom-container announcement">
+    <form action="">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col sm-12">
+                    <h1 class="create-header">Elan yarat</h1>
+                    <div class="row">
+
+                        <div class="col-sm-12">
+                            <div class="type">
+                                <button class="premium"><span>Sadə</span></button>
+                                <button class="premium active"><span>Premium</span></button>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="type bg-white p-1">
+                                <span class="active">Mətn</span>
+                                <span>Şəkil</span>
+                                <span>Video</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div>
+                                <label for="add-template">Başlıq arxa fonu</label>
+                                <label for="add-template" id="template" class="template">Arxa fon əlavə edin</label>
+                                <input type="file" id="add-template" class="d-none">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 ">
+                            <label for="category">Kateqoriya<span class="required">*</span></label>
+                            <div class="position-relative">
+                                <select name="" id="category" class="select">
+                                    <option value="">Murad</option>
+                                    <option value="">Ferman</option>
+                                </select>
+                                <svg class="position-absolute dropdown-icon" width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="#989898" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="announcement-name">Elanın adı<span class="required">*</span></label>
+                            <input type="text" class="input" id="announcement-name">
+                        </div>
+                        <div>
+                            <label for="tarif">Tarif</label>
+                            <div class="position-relative">
+                                <select name="" id="tarif" class="select">
+                                    <option value="">Murad</option>
+                                    <option value="">Ferman</option>
+                                </select>
+                                <svg class="position-absolute dropdown-icon" width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="#989898" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="mezmun">Məzmun<span class="required">*</span></label>
+                            <textarea class="input input-textarea" id="mezmun" rows="4"></textarea>
+                        </div>
+                        <div>
+                            <label for="age">Yaş aralığı</label>
+                            <input type="text" class="input" id="age">
+                        </div>
+                        <div>
+                            <label>Cins</label>
+                            <div class="type bg-white p-1 gender">
+                                <span class="active">Hər ikisi</span>
+                                <span>Kişi</span>
+                                <span>Qadın</span>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="name">Ad/soyad<span class="required">*</span></label>
+                            <input type="text" name="" id="name" class="input">
+                        </div>
+                        <div>
+                            <label for="phone">Mobil nömrə<span class="required">*</span></label>
+                            <input type="number" name="" id="phone" class="input">
+                        </div>
+                        <div class="position-relative">
+                            <label for="price">Məbləğ</label>
+                            <input type="number" id="price" class="input price">
+                            <span class="azn position-absolute">azn</span>
+                        </div>
+                        <div>
+                            <label class="media-label" for="add-media">Media əlavə et</label>
+                            <label for="add-media" class="button media-btn">
+                                <svg class="plus" width="10" height="10" viewBox="0 0 14 14"
+                                     fill="rgba(132, 53, 229, 1)"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="2" height="14" transform="translate(6)" fill="rgba(132, 53, 229, 1)"/>
+                                    <rect width="2" height="14" transform="translate(14 6) rotate(90)"
+                                          fill="rgba(132, 53, 229, 1)"/>
+                                </svg>
+                                <span class="media">Media</span>
+                            </label>
+                            <input type="file" id="add-media" class="d-none">
+                        </div>
+                    </div>
+                    <label class="customCheckbox2 circle">
+                        <input type="checkbox">
+                        <span class="checkmark-2"></span>
+                        <span class="title">Razılaşma yolu ilə</span>
+                    </label>
+                    <button class="site-button">Elanı dərc et!</button>
+                    <div class="error">
+                        <div>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                      stroke="#EB5757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 8V12" stroke="#EB5757" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M12 16H12.01" stroke="#EB5757" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="error-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, culpa
+                            distinctio
+                            exercitationem facere, illo itaque iure labore molestiae molestias nemo nesciunt officia
+                            optio perspiciatis provident quasi sunt totam vel veritatis.
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>

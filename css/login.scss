@@ -1,0 +1,173 @@
+$main-color: rgba(132, 53, 229, 1);
+$secondary-color: #989898;
+$black-color: #303030;
+$input-color: #E6E6E6;
+$sec-2: #636363;
+$sec-3: #696F79;
+$inBox: #F8F8F8;
+$input-color2: #D6D6D6;
+$sec-4: #767676;
+$img-background: rgba(95, 46, 234, 0.08);
+
+.container-fluid {
+  padding-left: 0 !important;
+}
+
+.login-img {
+  background-color: $img-background;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+
+  img {
+    height: auto;
+    width: 90%;
+    object-fit: cover;
+  }
+}
+
+.login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .position-absolute.text-center {
+    bottom: 26px;
+
+  }
+}
+
+.register-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-support {
+  font-size: 14px;
+  text-decoration: none;
+  color:$sec-4;
+  margin-top: 149px;
+  margin-bottom: 26px;
+}
+
+.loginForm {
+  width: 426px;
+}
+
+.login-header {
+  margin-bottom: 0;
+  padding-bottom: 24px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  border-bottom: 2px solid #5F2EEA;
+
+}
+
+.register-header {
+  margin-bottom: 0;
+  margin-top: 166px;
+  padding-bottom: 24px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  border-bottom: 1px solid #5F2EEA;;
+}
+
+.formLabel {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: $sec-3;
+  font-weight: 500;
+
+  &.top {
+    margin-top: 24px;
+  }
+
+  &.others {
+    margin-top: 16px;
+  }
+}
+
+.icon {
+  cursor: pointer;
+  right: 15px;
+  top: 11px;
+}
+
+.dropdown-icon {
+  right: 19px;
+  top: 62px;
+}
+
+.customCheckbox {
+  margin-top: 26px;
+  margin-bottom: 21px;
+
+  .checkContent {
+    color: $sec-3;
+  }
+}
+
+.site-button {
+  margin-bottom: 20px;
+}
+
+.registerLink {
+  text-decoration: none;
+  color: $main-color;
+}
+
+.resetLink {
+  text-decoration: none;
+  color: $sec-3;
+}
+
+.formBottom {
+  margin-top: 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.support {
+  font-size: 14px;
+  color: $sec-4;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 426px) {
+  .login-box {
+    margin: 18px 0 20px 0;
+    height: 100vh;
+
+    .new{
+      margin-top: 40%;
+    }
+
+    .position-absolute.text-center {
+      bottom: -80px;
+
+      .new {
+        bottom: 250px;
+      }
+    }
+  }
+  .container-fluid {
+    padding-left: var(--bs-gutter-x, .75rem) !important;
+  }
+  .formBottom {
+    flex-direction: column;
+  }
+  h1.register-header {
+    margin-top: 50px;
+  }
+  .register-support {
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+}
